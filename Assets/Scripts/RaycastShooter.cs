@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RaycastShooter : MonoBehaviour {
 
-	public float fireRate = .25f;
+	public float fireRate = .10f;
 	public float range = 50;
 	public ParticleSystem smokeParticles;
 	public GameObject hitParticles;
