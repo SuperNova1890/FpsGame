@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: be4bb3a05c5b37c4f9c81e273002ac42
-timeCreated: 1465812270
+guid: e8fa58ffc7a4bab4085c1242bd47fa82
+timeCreated: 1466106923
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -12,6 +12,7 @@ ModelImporter:
     100008: Cylinder.003
     100010: Cylinder.004
     100012: //RootNode
+    100014: Plane
     400000: Cube
     400002: Cylinder
     400004: Cylinder.001
@@ -19,24 +20,28 @@ ModelImporter:
     400008: Cylinder.003
     400010: Cylinder.004
     400012: //RootNode
+    400014: Plane
     2300000: Cube
     2300002: Cylinder
     2300004: Cylinder.001
     2300006: Cylinder.002
     2300008: Cylinder.003
     2300010: Cylinder.004
+    2300012: Plane
     3300000: Cube
     3300002: Cylinder
     3300004: Cylinder.001
     3300006: Cylinder.002
     3300008: Cylinder.003
     3300010: Cylinder.004
-    4300000: Cylinder.004
-    4300002: Cylinder.003
-    4300004: Cylinder.002
-    4300006: Cylinder.001
-    4300008: Cylinder
-    4300010: Cube
+    3300012: Plane
+    4300000: Plane
+    4300002: Cylinder.004
+    4300004: Cylinder.003
+    4300006: Cylinder.002
+    4300008: Cylinder.001
+    4300010: Cylinder
+    4300012: Cube
   materials:
     importMaterials: 1
     materialName: 0
@@ -61,7 +66,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 7
+    globalScale: 10
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
