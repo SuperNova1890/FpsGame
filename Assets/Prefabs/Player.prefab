@@ -115,6 +115,7 @@ GameObject:
   - 54: {fileID: 5407640}
   - 82: {fileID: 8212076}
   - 136: {fileID: 13649062}
+  - 114: {fileID: 11493254}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -190,10 +191,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178844}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7395163, z: 0, w: 0.6731387}
   m_LocalPosition: {x: 0, y: 5.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 95.380394, z: 0}
   m_Children:
   - {fileID: 446436}
   m_Father: {fileID: 0}
@@ -792,6 +793,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!114 &11493254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dcdc26ebd98c19419113e07c38a7522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalLifePoints: 100
+  LivePoints: 100
+  DamagePerHit: 10
+  hitSFX: {fileID: 0}
 --- !u!120 &12059950
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -845,7 +861,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178844}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1.8
