@@ -42,12 +42,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427312}
-  - 65: {fileID: 6586612}
   - 114: {fileID: 11475422}
   - 114: {fileID: 11467074}
+  - 54: {fileID: 5426566}
+  - 136: {fileID: 13661724}
   m_Layer: 0
-  m_Name: monster1
-  m_TagString: Untagged
+  m_Name: monster
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +149,7 @@ GameObject:
   - 4: {fileID: 476804}
   - 33: {fileID: 3339396}
   - 23: {fileID: 2363584}
-  - 64: {fileID: 6463326}
+  - 136: {fileID: 13650840}
   m_Layer: 0
   m_Name: Cone
   m_TagString: Untagged
@@ -296,7 +297,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.63, y: 7.26, z: 0}
+  m_LocalPosition: {x: 11.63, y: 8.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -359,10 +360,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165462}
-  m_LocalRotation: {x: -0.5068693, y: -0.49303508, z: 0.493035, w: 0.50686926}
-  m_LocalPosition: {x: -0.9094502, y: 0.66883737, z: 0.7017383}
+  m_LocalRotation: {x: -0.5000001, y: -0.5, z: 0.5, w: 0.49999994}
+  m_LocalPosition: {x: -0.90945053, y: 0.669, z: 0.615}
   m_LocalScale: {x: 0.64391863, y: 0.6439186, z: 0.64391863}
-  m_LocalEulerAnglesHint: {x: -1.5853, y: -90, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
   m_Children: []
   m_Father: {fileID: 427312}
   m_RootOrder: 0
@@ -801,18 +802,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169160}
   m_Mesh: {fileID: 4300006, guid: 2d3a7225a656274429dddff1f8742ccd, type: 3}
---- !u!64 &6463326
-MeshCollider:
+--- !u!54 &5426566
+Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165462}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_GameObject: {fileID: 121074}
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300010, guid: 2d3a7225a656274429dddff1f8742ccd, type: 3}
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!65 &6576180
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -825,18 +829,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.000001, y: 2.0000012, z: 2}
   m_Center: {x: -0.000000059604645, y: -0.00000011920929, z: -8.881784e-16}
---- !u!65 &6586612
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121074}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1455467, y: 2.3400822, z: 1}
-  m_Center: {x: 0.016807556, y: 0.6700411, z: 0.24000001}
 --- !u!114 &11467074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -848,7 +840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff2d69167cd0519499e69eba9a3ad8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   minDist: 1
   target: {fileID: 0}
 --- !u!114 &11475422
@@ -864,6 +856,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   hitParticles: {fileID: 160618, guid: b3316a95057895640b321ff257e1090f, type: 2}
+--- !u!136 &13650840
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.33320776
+  m_Height: 2.6941078
+  m_Direction: 1
+  m_Center: {x: 0.183019, y: -1.013525, z: -1.3291041}
+--- !u!136 &13661724
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.51, z: 0.21}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

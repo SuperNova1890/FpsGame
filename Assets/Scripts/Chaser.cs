@@ -6,17 +6,18 @@ using System.Collections;
 public class Chaser : MonoBehaviour
 {
 
-	public float speed = 20.0f;
+	public float speed = 3.0f;
 	public float minDist = 1f;
 	public Transform target;
 
 	// Use this for initialization
 	void Start ()
 	{
+		
 		// if no target specified, assume the player
 		if (target == null)
 		{
-
+			
 			if (GameObject.FindWithTag ("Player") != null)
 			{
 				target = GameObject.FindWithTag ("Player").GetComponent<Transform> ();
@@ -27,6 +28,7 @@ public class Chaser : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+
 		if (target == null)
 			return;
 
@@ -38,7 +40,10 @@ public class Chaser : MonoBehaviour
 
 		//so long as the chaser is farther away than the minimum distance, move towards it at rate speed.
 		if (distance > minDist)
+		{
 			transform.position += transform.forward * speed * Time.deltaTime;	
+		}
+
 	}
 
 	// Set the target of the chaser
