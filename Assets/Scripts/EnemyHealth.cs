@@ -4,16 +4,16 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour, IDamageable {
 
-	public Text scoreText;
 	public int startingHealth = 3;
 	public GameObject hitParticles;
-	private int totalscore = 0;
+	public int scoreValue = 10;
+
 
 	private int currentHealth;
 
 	void Start()
 	{
-		scoreText.text = "Score: " + totalscore;
+		
 		currentHealth = startingHealth;
 	}
 
@@ -23,8 +23,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 		currentHealth -= damage;
 		if (currentHealth <= 0) 
 		{
-			totalscore += 10;
-			scoreText.text = "Score: " + totalscore;
+			
+			ScoreManager.score += scoreValue;
 			Defeated();
 		}
 	}
