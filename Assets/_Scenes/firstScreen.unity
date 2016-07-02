@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: TitleMenu
-  delay: 2
+  delay: 4
 --- !u!4 &887499818
 Transform:
   m_ObjectHideFlags: 0
