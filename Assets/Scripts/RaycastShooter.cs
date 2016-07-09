@@ -66,6 +66,6 @@ public class RaycastShooter : MonoBehaviour
 		shootFlare.SetActive (true);
 		yield return shotLength;
 		lineRenderer.enabled = false;
-		shootFlare.SetActive (false);
+		shootFlare.SetActive (true);
 	}
 }

@@ -31,7 +31,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
 
 	void Defeated()
 	{
-		gameObject.SetActive (false);
+		Destroy (gameObject);
 	}
 
 }
