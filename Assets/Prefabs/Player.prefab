@@ -543,7 +543,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -807,7 +807,10 @@ MonoBehaviour:
   TotalLifePoints: 100
   LivePoints: 100
   DamagePerHit: 10
-  hitSFX: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 1f0aef4d093aedd45a7cd26e1396fad8, type: 3}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.19607843}
+  damageImage: {fileID: 0}
 --- !u!120 &12059950
 LineRenderer:
   m_ObjectHideFlags: 1

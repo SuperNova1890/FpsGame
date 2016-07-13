@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 			if (Time.timeScale > 0f) {
 				UIGamePaused.SetActive(true); // this brings up the pause UI
 				Time.timeScale = 0f; // this pauses the game action
+
 			} else {
 				Time.timeScale = 1f; // this unpauses the game action (ie. back to normal)
 				UIGamePaused.SetActive(false); // remove the pause UI
